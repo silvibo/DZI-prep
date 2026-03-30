@@ -1,0 +1,207 @@
+/* Общи */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1E90FF;
+    padding: 15px 30px;
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1E90FF, #FF1493);
+    color: white;
+}
+
+.hero input {
+    margin-top: 20px;
+    padding: 10px;
+    width: 250px;
+    border-radius: 20px;
+    border: none;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Карти */
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* Цветове */
+.bel { background: #FFD700; }
+.bio { background: #ADFF2F; }
+.inf { background: #1E90FF; color: white; }
+.it  { background: #FF69B4; color: white; }
+
+/* Снимки */
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Бутон */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #FF4500;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #FF6347;
+}
+/* Бутон */
+#darkModeToggle {
+    margin-left: 20px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: white;
+}
+
+/* 🌙 Dark mode */
+.dark {
+    background: #121212;
+    color: white;
+}
+
+/* Карти */
+.dark .card {
+    background: #1e1e1e;
+    color: white;
+}
+
+/* Navbar */
+.dark .navbar {
+    background: #000;
+}
+
+/* Hero */
+.dark .hero {
+    background: linear-gradient(135deg, #000, #333);
+}
+
+/* Footer */
+.dark .footer {
+    background: #000;
+}
+
+/* Банер */
+.dark .banner {
+    background: #222;
+}
+/* Банер */
+.banner {
+    text-align: center;
+    padding: 40px;
+    background: #222;
+    color: white;
+    font-size: 20px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #111;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .hero input {
+        width: 100%;
+    }
+}
+/* Малък hero */
+.hero.small {
+    padding: 40px 20px;
+}
+
+/* Уроци */
+.lessons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.lesson {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.lesson button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #1E90FF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.lesson button:hover {
+    background: #187bcd;
+}
+
+/* Съдържание */
+#contentBox {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+}
+.question {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    text-align: left;
+}

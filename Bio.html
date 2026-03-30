@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Биология</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="navbar">
+    <h2>ДЗИ Prep</h2>
+    <nav>
+        <a href="index.html">Начало</a>
+    </nav>
+</header>
+
+<section class="hero small">
+    <h1>Биология</h1>
+    <p>Подготовка за матура</p>
+</section>
+
+<div class="container">
+    <h2>Уроци</h2>
+
+    <div class="lessons">
+        <div class="lesson">
+            <h3>Клетка</h3>
+            <button onclick="show('cell')">Отвори</button>
+        </div>
+
+        <div class="lesson">
+            <h3>Генетика</h3>
+            <button onclick="show('genetics')">Отвори</button>
+        </div>
+
+        <div class="lesson">
+            <h3>Екология</h3>
+            <button onclick="show('eco')">Отвори</button>
+        </div>
+    </div>
+
+    <div id="content"></div>
+</div>
+
+<footer class="footer">
+    <p>© 2026 ДЗИ Prep</p>
+</footer>
+
+<script>
+function show(type) {
+    const c = document.getElementById("content");
+
+    if(type === "cell") {
+        c.innerHTML = "<h2>Клетка</h2><p>Клетката е основна единица на живота...</p>";
+    }
+
+    if(type === "genetics") {
+        c.innerHTML = "<h2>Генетика</h2><p>Наследственост и изменчивост...</p>";
+    }
+
+    if(type === "eco") {
+        c.innerHTML = "<h2>Екология</h2><p>Взаимодействия в природата...</p>";
+    }
+}
+</script>
+
+</body>
+</html>

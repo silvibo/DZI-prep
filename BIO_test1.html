@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест по Биология</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="navbar">
+    <h2>ДЗИ Prep</h2>
+    <nav>
+        <a href="index.html">Начало</a>
+        <a href="Test.html">Назад</a>
+    </nav>
+</header>
+
+<section class="hero small">
+    <h1>Тест по Биология и здравно образование</h1>
+    <p>12 клас</p>
+</section>
+
+<div class="container">
+
+    <form id="quizForm">
+
+        <!-- Въпрос 1 -->
+        <div class="question">
+            <h3>1. Коя е основната единица на живота?</h3>
+            <label><input type="radio" name="q1" value="0"> Орган</label><br>
+            <label><input type="radio" name="q1" value="1"> Клетка</label><br>
+            <label><input type="radio" name="q1" value="2"> Тъкан</label>
+        </div>
+
+        <!-- Въпрос 2 -->
+        <div class="question">
+            <h3>2. Какво съдържа ДНК?</h3>
+            <label><input type="radio" name="q2" value="0"> Генетична информация</label><br>
+            <label><input type="radio" name="q2" value="1"> Енергия</label><br>
+            <label><input type="radio" name="q2" value="2"> Вода</label>
+        </div>
+
+        <!-- Въпрос 3 -->
+        <div class="question">
+            <h3>3. Кой органел отговаря за производството на енергия?</h3>
+            <label><input type="radio" name="q3" value="0"> Митохондрия</label><br>
+            <label><input type="radio" name="q3" value="1"> Ядро</label><br>
+            <label><input type="radio" name="q3" value="2"> Рибозома</label>
+        </div>
+
+        <!-- Въпрос 4 -->
+        <div class="question">
+            <h3>4. Кой процес е основен за фотосинтезата?</h3>
+            <label><input type="radio" name="q4" value="0"> Преобразуване на светлина в химическа енергия</label><br>
+            <label><input type="radio" name="q4" value="1"> Дишане</label><br>
+            <label><input type="radio" name="q4" value="2"> Деление на клетките</label>
+        </div>
+
+        <!-- Въпрос 5 -->
+        <div class="question">
+            <h3>5. Кое твърдение е вярно за екологията?</h3>
+            <label><input type="radio" name="q5" value="0"> Изучава взаимоотношенията между организмите и средата им</label><br>
+            <label><input type="radio" name="q5" value="1"> Изучава химични реакции</label><br>
+            <label><input type="radio" name="q5" value="2"> Изследва планетарните движения</label>
+        </div>
+
+        <br>
+        <button type="button" onclick="checkTest()" class="btn">Провери</button>
+
+    </form>
+
+    <h2 id="result"></h2>
+
+</div>
+
+<footer class="footer">
+    <p>© 2026 ДЗИ Prep</p>
+</footer>
+
+<script>
+function checkTest() {
+    let score = 0;
+
+    const answers = {
+        q1: "1",
+        q2: "0",
+        q3: "0",
+        q4: "0",
+        q5: "0"
+    };
+
+    for (let q in answers) {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (selected && selected.value === answers[q]) {
+            score++;
+        }
+    }
+
+    const percent = (score / 5) * 100;
+    document.getElementById("result").innerText = "Резултат: " + percent + "%";
+}
+</script>
+
+</body>
+</html>
