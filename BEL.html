@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>БЕЛ - Подготовка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <h2 class="logo">ДЗИ Prep</h2>
+    <nav>
+        <a href="index.html">Начало</a>
+        <a href="#">Тестове</a>
+    </nav>
+</header>
+
+<!-- Заглавие -->
+<section class="hero small">
+    <h1>Български език и литература</h1>
+    <p>Подготовка за матура</p>
+</section>
+
+<!-- Съдържание -->
+<div class="container">
+
+    <h2>📘 Уроци</h2>
+
+    <div class="lessons">
+
+        <div class="lesson">
+            <h3>Синтаксис</h3>
+            <p>Основни правила за изречения и пунктуация</p>
+            <button onclick="showLesson('syntax')">Отвори</button>
+        </div>
+
+        <div class="lesson">
+            <h3>Правопис</h3>
+            <p>Често срещани грешки</p>
+            <button onclick="showLesson('spelling')">Отвори</button>
+        </div>
+
+        <div class="lesson">
+            <h3>Литература</h3>
+            <p>Автори и произведения</p>
+            <button onclick="showLesson('literature')">Отвори</button>
+        </div>
+
+    </div>
+
+    <!-- Тук се показва урокът -->
+    <div id="contentBox"></div>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>© 2026 ДЗИ Prep</p>
+</footer>
+
+<script>
+function showLesson(type) {
+    const box = document.getElementById("contentBox");
+
+    if (type === "syntax") {
+        box.innerHTML = "<h2>Синтаксис</h2><p>Изречението е основна единица...</p>";
+    }
+
+    if (type === "spelling") {
+        box.innerHTML = "<h2>Правопис</h2><p>Често срещани грешки са...</p>";
+    }
+
+    if (type === "literature") {
+        box.innerHTML = "<h2>Литература</h2><p>Иван Вазов, Христо Ботев...</p>";
+    }
+}
+</script>
+
+</body>
+</html>
